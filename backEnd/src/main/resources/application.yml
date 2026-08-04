@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  data:
+    mongodb:
+      uri: ${MONGO_URI:mongodb+srv://priyanshuparashar08_db_user:priyanshuparashar08_db_user@cluster0.nbqzkia.mongodb.net/onoe?appName=Cluster0}
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+jwt:
+  secret: ${JWT_SECRET:my-super-secret-key-that-should-be-at-least-256-bits-long-for-hs256}
+  expiration-ms: 86400000
+
+cloudinary:
+  cloud-name: ${CLOUDINARY_CLOUD_NAME:gs7c067v}
+  api-key: ${CLOUDINARY_API_KEY:185867624568452}
+  api-secret: ${CLOUDINARY_API_SECRET:HpTrfFaw971Edtl7u0PlPpOxAdE}
+
+ai:
+  verification:
+    api-url: ${AI_VERIFICATION_API_URL:http://localhost:5000}
